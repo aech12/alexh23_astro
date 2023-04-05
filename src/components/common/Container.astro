@@ -1,6 +1,10 @@
 ---
+export interface Props {
+  classStyle?: string
+}
+const { classStyle } = Astro.props as Props
 ---
 
-<div class="max-w-6xl">
+<div class={`max-w-6xl mx-auto ${classStyle}`}>
   <slot />
 </div>
