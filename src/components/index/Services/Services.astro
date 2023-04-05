@@ -1,0 +1,28 @@
+---
+import ListItem from './ListItem.astro'
+import Button from '@components/common/Button.astro'
+// import Canvas from './Canvas.astro'
+---
+
+<section class="flex flex-col md:flex-row max-w-6xl m-auto">
+  <div class="w-full p-4 flex items-center justify-center">
+    <article class="p-8 py-16 md:p-16 md:py-24 space-y-6">
+      <p class="text-6xl font-bold">Services</p>
+      <p class="text-2xl font-medium text-zinc-400">From custom requests, to full websites.</p>
+      <div class="space-y-2">
+        <ListItem text="Websites (ecommerce, blogs and more)" />
+        <ListItem text="Apps, APIs, Google Apps Script" />
+        <ListItem text="Wordpress-like integration! (thanks to builder.io)" />
+        <ListItem text="Custom scripts" />
+      </div>
+      <div class="">
+        <Button>Contact Me</Button>
+        <Button>Learn More</Button>
+      </div>
+    </article>
+  </div>
+  <div class="w-full bg-blue-400">
+    <!-- <Canvas /> -->
+    3D model here
+  </div>
+</section>

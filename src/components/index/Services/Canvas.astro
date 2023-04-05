@@ -1,0 +1,17 @@
+---
+// export interface Props {
+//   splineModel_url: string
+// }
+// const { splineModel_url } = Astro.props as Props
+---
+
+<script>
+// <script define:vars={{ splineModel_url }}> // define breaks TS support, why?
+  import { Application } from '@splinetool/runtime'
+
+  const canvas = document.getElementById('canvas3d') as HTMLCanvasElement
+  const app = new Application(canvas)
+  app.load("https://prod.spline.design/WH-CE8TKvoHB5Afo/scene.splinecode")
+</script>
+
+<canvas id="canvas3d" class="w-full h-full"></canvas>

@@ -1,0 +1,13 @@
+---
+import { Icon } from 'astro-icon'
+
+export interface Props {
+  text: string;
+}
+const { text } = Astro.props as Props;
+---
+
+<div>
+  <Icon class="inline" name="mdi:check-circle" width={20} height={20} />
+  <p class="text-md font-semibold inline text-zinc-600">{text}</p>
+</div>
