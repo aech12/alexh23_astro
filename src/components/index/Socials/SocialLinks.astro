@@ -1,0 +1,16 @@
+---
+import SocialLink from '@components/common/SocialLink.astro'
+---
+
+<article
+  class="p-6 max-w-sm mx-auto bg-white rounded-xl flex flex-col justify-center items-center space-y-2 border-2 border-blue-500 shadow-lg"
+>
+  <h3 class="font-bold text-xl">Socials</h3>
+  <nav class="flex flex-col">
+    <SocialLink icon="mdi:github" text="Github" href="https://github.com/aech12" />
+    <SocialLink icon="mdi:linkedin" text="Linkedin" href="https://www.linkedin.com/in/alexhowez/" />
+    <SocialLink icon="ic:outline-discord" text="Discord: alex#3397" />
+    <SocialLink icon="ic:baseline-email" text="aech-12@hotmail.com" href="mailto:aech-12@hotmail.com" />
+  </nav>
+  <button class="w-full bg-orange-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"> Message Me</button>
+</article>
