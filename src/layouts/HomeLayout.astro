@@ -1,0 +1,42 @@
+---
+import SiteMeta from '../components/starter/SiteMeta.astro'
+import Navbar from '@components/ui/Navbar.astro'
+// import Header from '../components/Header.astro'
+import Footer from '../components/starter/Footer.astro'
+
+const {
+  title = 'Alex Howez | Web Developer',
+  description = 'Web Developer portfolio made with Astro, from full-stack web developer Alex Howez.',
+  // url,
+  image = '/social-preview-image.png',
+  author = 'Alex Howezs',
+} = Astro.props
+---
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <SiteMeta
+      title={title}
+      description={description.substring(0, 100)}
+      url={Astro.site
+        ? `${Astro.site}/${title.toLowerCase().replaceAll(' ', '-')}`
+        : `https://accessible-astro.dev/${title.toLowerCase().replaceAll(' ', '-')}`}
+      image={image}
+      author={author}
+    />
+  </head>
+  <body>
+    <Navbar />
+    <main id="main-content">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
