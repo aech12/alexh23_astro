@@ -1,5 +1,5 @@
 ---
-import Navigation from '../components/Navigation.astro'
+import Navigation from './Navigation.astro'
 import { SkipLinks } from 'accessible-astro-components'
 import { Icon } from 'astro-icon'
 ---
@@ -39,7 +39,7 @@ import { Icon } from 'astro-icon'
 </header>
 
 <style lang="scss" is:global>
-  @use '../assets/scss/base/outline' as *;
+  @use '../../assets/scss/base/outline' as *;
 
   header {
     .type-icon a {

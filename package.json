@@ -1,8 +1,8 @@
 {
-  "name": "accessible-astro-starter",
-  "description": "An Accessible Starter Theme for Astro including several accessiblity features and tools to help you build faster.",
-  "version": "2.0.2",
-  "author": "Mark Teekman",
+  "name": "alexh23",
+  "description": "Web Developer portfolio made with Astro, with the helpful repo from markteekman/accessible-astro-starter used as starter.",
+  "version": "1.0",
+  "author": "Alex Howez",
   "homepage": "https://accessible-astro.dev",
   "scripts": {
     "dev": "astro dev",
@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "@astrojs/ts-plugin": "^0.4.4",
+    "@splinetool/runtime": "^0.9.282",
     "flowbite": "^1.6.4",
     "three": "^0.151.3"
   }
