@@ -1,0 +1,20 @@
+---
+import { Icon } from 'astro-icon'
+
+export interface Props {
+  text: string
+  icon?: string
+  href?: string
+}
+const { text, icon, href } = Astro.props as Props
+---
+
+<style lang="css">
+  [astro-icon] {
+      fill: blue;
+  }
+</style>
+
+<a href={href} target="_blank" rel="noreferrer noopener" class="inline text-lg text-gray-600 hover:text-gray-600 font-semibold cursor-pointer"
+  ><Icon name={icon} width={25} height={25} class="inline" /> {text}
+</a>
