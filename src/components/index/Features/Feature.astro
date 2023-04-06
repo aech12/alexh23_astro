@@ -1,0 +1,12 @@
+---
+// Box.astro
+export interface Props {
+  text: string;
+  classStyle?: string
+}
+const { text, classStyle } = Astro.props as Props;
+---
+
+<div class={`p-4 h-40 text-center rounded-sm ${classStyle}`}>
+  <p class="text-xl font-medium">{text}</p>
+</div>

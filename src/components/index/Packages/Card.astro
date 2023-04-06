@@ -1,0 +1,25 @@
+---
+export interface Props {
+  title: string
+  classStyle?: string
+  listItems?: string[]
+}
+const { title, classStyle, listItems } = Astro.props as Props
+
+import ButtonLink from '@components/common/ButtonLink.astro'
+import SocialLink from '@components/common/SocialLink.astro'
+---
+
+<article class={`p-8 text-left rounded-xl space-y-4 shadow-md ${classStyle} w-5/12`}>
+  <p class="text-gray-500 font-semibold text-lg">{title}</p>
+  <ul class="flex flex-col space-y-2">
+    {
+      listItems
+        ? listItems.map((item) => (
+            <SocialLink text={item} icon="ic:baseline-check-circle" classStyle="text-gray-500 font-semibold text-lg" href="" />
+          ))
+        : null
+    }
+  </ul>
+  <ButtonLink>Learn More</ButtonLink>
+</article>

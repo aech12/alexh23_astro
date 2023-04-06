@@ -1,0 +1,27 @@
+---
+export interface Props {
+  classStyle?: string
+  type?: 'main' | 'secondary'
+  href?: string
+}
+const { classStyle, type = 'main', href } = Astro.props as Props
+let buttonStyle = ''
+
+switch (type) {
+  case 'main':
+    buttonStyle = 'bg-blue-500 hover:bg-blue-700 text-white'
+    break
+  case 'secondary':
+    buttonStyle = 'bg-gray-500 hover:bg-gray-700 text-white'
+    break
+}
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noreferrer noopener"
+  class={`${buttonStyle} font-bold py-2 px-4 rounded ${classStyle}`}
+>
+  <slot />
+</a>
