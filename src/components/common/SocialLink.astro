@@ -5,8 +5,9 @@ export interface Props {
   text: string
   icon?: string
   href?: string
+  classStyle?: string
 }
-const { text, icon, href } = Astro.props as Props
+const { text, icon, href, classStyle } = Astro.props as Props
 ---
 
 <style lang="css">
@@ -15,6 +16,6 @@ const { text, icon, href } = Astro.props as Props
   }
 </style>
 
-<a href={href} target="_blank" rel="noreferrer noopener" class="inline text-lg text-gray-600 hover:text-gray-600 font-semibold cursor-pointer"
-  ><Icon name={icon} width={25} height={25} class="inline" /> {text}
+<a href={href} target="_blank" rel="noreferrer noopener" class={`inline text-gray-600 hover:text-gray-600 cursor-pointer ${classStyle}`}
+  ><Icon name={icon} width={20} height={20} class="inline" />{" "} {text}
 </a>
