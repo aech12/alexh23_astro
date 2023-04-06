@@ -1,42 +1,20 @@
 ---
 import HomeLayout from '../layouts/HomeLayout.astro'
-import DefaultLayout from '../layouts/DefaultLayout.astro'
-import Hero from '../components/starter/Hero.astro'
-import Hero2 from '@components/index/Hero/Hero.astro'
-// import Packages from '@components/index/Packages/Packages.astro'
+import Hero from '@components/index/Hero/Hero.astro'
+import Packages from '@components/index/Packages/Packages.astro'
 import Services from '@components/index/Services/Services.astro'
 import Features from '@components/index/Features/Features.astro'
 import Projects from '@components/index/Projects/Projects.astro'
 import Socials from '@components/index/Socials/Socials.astro'
-import Feature from '../components/starter/Feature.astro'
 ---
 
 <div class="font-sans">
   <HomeLayout>
-    <Hero2 />
-    <!-- <Packages /> -->
+    <Hero />
+    <Packages />
     <Services />
     <Features />
     <Projects />
     <Socials />
   </HomeLayout>
-  <DefaultLayout title="Home">
-    <Hero />
-    <section class="my-64">
-      <div class="container">
-        <h2 class="mb-16 text-6xl">Features</h2>
-        <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-          <Feature icon="mdi:tailwind" title="Tailwind CSS">
-            Use the power of Tailwind to greatly improve your productivity and enhance your developer workflow.
-          </Feature>
-          <Feature icon="mdi:wheelchair-accessibility" title="a11y Components">
-            17 components and counting, all tried and tested for the most optimal accessible experience for your
-            visitors.
-          </Feature>
-        </div>
-      </div>
-    </section>
-    <!-- <ContentMedia imgSrc="/accessible-components.webp">
-    </ContentMedia> -->
-  </DefaultLayout>
 </div>
