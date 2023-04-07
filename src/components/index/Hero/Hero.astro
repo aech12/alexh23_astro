@@ -1,5 +1,7 @@
 ---
+import { Image } from '@astrojs/image/components'
 import HeroContent from './HeroContent.astro'
+import img from '@assets/img/hero-mobileBg.jpg' 
 ---
 
 <script>
@@ -7,14 +9,15 @@ import HeroContent from './HeroContent.astro'
 
   const canvas = document.getElementById('canvas3d') as HTMLCanvasElement
   const app = new Application(canvas)
-  app.load('https://prod.spline.design/WH-CE8TKvoHB5Afo/scene.splinecode')
+  app.load('https://prod.spline.design/2eLMVMGdvbm0rPLR/scene.splinecode')
 </script>
 
 <section id="hero" class="relative bg-hero">
   <div class="max-w-7xl mx-auto h-[450px] md:h-[577px]">
     <div class="w-full h-full hidden md:block">
-      <!-- <canvas id="canvas3d" class="w-full h-full"></canvas> -->
+      <canvas id="canvas3d" class="w-full h-full"></canvas>
     </div>
+    <Image src={img} aspectRatio="5:3" alt={'Background for mobile viewport'} class="md:hidden w-full h-[450px] " />
     <div class="sm:mx-10 absolute top-0 left-50 md:w-1/2 lg:w-[500px] lg:left-80 h-full flex items-center justify-center">
       <HeroContent />
     </div>

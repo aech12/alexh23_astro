@@ -4,7 +4,12 @@ import Container from '@components/common/Container.astro'
 import Button from '@components/common/Button.astro'
 import Title from '@components/common/Title.astro'
 import Project from './Project.astro'
-import im from '../../../assets/img/projects/cat.jpg' 
+import img1 from '@assets/img/projects/musegy1.png' 
+import img2 from '@assets/img/projects/gameplex1.png' 
+import img3 from '@assets/img/projects/answer1.png' 
+import img4 from '@assets/img/projects/efiweb1.png' 
+import img5 from '@assets/img/projects/ecomtemplate1.png' 
+import img6 from '@assets/img/projects/openly1.png' 
 ---
 
 <!-- <h2
@@ -19,12 +24,12 @@ import im from '../../../assets/img/projects/cat.jpg'
       <div class="h-1 w-full bg-gradient-to-r from-[#F19D1E] via-[#EB5D46] to-[#972324] bg-no-repeat"></div>
     </div>
     <ul class="my-8 px-5 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-      <Project item={projects.items[0]} img={im} />
-      <Project item={projects.items[1]} img={im} />
-      <Project item={projects.items[2]} img={im} />
-      <Project item={projects.items[3]} img={im} />
-      <Project item={projects.items[4]} img={im} />
-      <Project item={projects.items[5]} img={im} />
+      <Project item={projects.items[0]} img={img1} />
+      <Project item={projects.items[1]} img={img2} />
+      <Project item={projects.items[2]} img={img3} />
+      <Project item={projects.items[3]} img={img4} />
+      <Project item={projects.items[4]} img={img5} />
+      <Project item={projects.items[5]} img={img6} />
     </ul>
     <div class="w-full flex justify-center">
       <Button href="https://github.com/aech12/" openInNewTab={true} type="light-outline" classStyle="">See More</Button>

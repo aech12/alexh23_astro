@@ -9,15 +9,13 @@
       {
           "title": "Gameplex Wallet (on beta)",
           "text": "Crypto wallet for multiple platforms, with a beautifully designed website and blog",
-          "img": "../img/projects/cat.jpg",
-          "img2": "https://www.datocms-assets.com/70058/1660800876-gameplex1.png",
+          "img": "https://www.datocms-assets.com/70058/1660800876-gameplex1.png",
           "alt": "Project 2"
       },
       {
           "title": "AnsweringEverything",
           "text": "Get answers for everything! | I've contributed to this website, moving it's blog system to MDX",
-          "img": "../img/projects/cat.jpg",
-          "img2": "https://www.datocms-assets.com/70058/1660800643-answer1.png",
+          "img": "https://www.datocms-assets.com/70058/1660800643-answer1.png",
           "alt": "Project 3"
       },
       {
@@ -29,15 +27,13 @@
       {
           "title": "My Ecommerce Template",
           "text": "My NextJS template ready to be deployed. Shopify, BigCommerce and many other integrations",
-          "img": "../img/projects/cat.jpg",
-          "img2": "https://www.datocms-assets.com/70058/1652295660-3orofow.png",
+          "img": "https://www.datocms-assets.com/70058/1652295660-3orofow.png",
           "alt": "Project 5"
       },
       {
           "title": "OpenlyPrivate",
           "text": "OpenlyPrivate is a Facebook-like website with Trello functionality (in beta testing).",
-          "img": "../img/projects/cat.jpg",
-          "img2": "https://www.datocms-assets.com/70058/1652296029-1231.png",
+          "img": "https://www.datocms-assets.com/70058/1652296029-1231.png",
           "alt": "Project 6"
       }
   ]

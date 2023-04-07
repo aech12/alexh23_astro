@@ -1,11 +1,11 @@
 ---
 import ListItem from './ListItem.astro'
 import Button from '@components/common/Button.astro'
-// import Canvas from './Canvas.astro'
+import Canvas from './Canvas.astro'
 ---
 
 <section class="flex flex-col md:flex-row max-w-6xl m-auto">
-  <div class="w-full p-4 flex items-center justify-center">
+  <div class="w-full p-4 flex items-center justify-center cursor-none">
     <article class="p-8 py-10 md:p-16 md:py-10 space-y-6">
       <p class="text-6xl font-bold">Services</p>
       <p class="text-2xl font-medium text-zinc-400">From custom requests, to full websites.</p>
@@ -22,7 +22,6 @@ import Button from '@components/common/Button.astro'
     </article>
   </div>
   <div class="w-full bg-blue-400">
-    <!-- <Canvas /> -->
-    3D model here
+    <Canvas />
   </div>
 </section>
