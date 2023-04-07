@@ -1,16 +1,24 @@
 ---
 import projects from '@assets/json/projects.json'
 import Container from '@components/common/Container.astro'
-import ButtonLink from '@components/common/ButtonLink.astro'
+import Button from '@components/common/Button.astro'
+import Title from '@components/common/Title.astro'
 import Project from './Project.astro'
-import im from '../../../assets/img/projects/cat.jpg'
+import im from '../../../assets/img/projects/cat.jpg' 
 ---
 
-<!-- projects.items.map((item) => ()) -->
+<!-- <h2
+    class="bg-gradient-to-r from-blue-300 via-orange-500 to-red-400 bg-[length:100%_5px] bg-no-repeat bg-bottom w-min font-bold"
+  >
+    Reach Me
+  </h2> --><!-- projects.items.map((item) => ()) -->
 <Container classStyle="">
   <div class="py-10 w-full">
-    <h2 class="mb-2 text-center text-xl md:text-4xl font-bold">Projects</h2>
-    <ul class="my-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+    <div class="py-6 w-36 mx-auto">
+      <Title level="h2">Projects</Title>
+      <div class="h-1 w-full bg-gradient-to-r from-[#F19D1E] via-[#EB5D46] to-[#972324] bg-no-repeat"></div>
+    </div>
+    <ul class="my-8 px-5 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
       <Project item={projects.items[0]} img={im} />
       <Project item={projects.items[1]} img={im} />
       <Project item={projects.items[2]} img={im} />
@@ -19,7 +27,7 @@ import im from '../../../assets/img/projects/cat.jpg'
       <Project item={projects.items[5]} img={im} />
     </ul>
     <div class="w-full flex justify-center">
-      <ButtonLink classStyle="">See More</ButtonLink>
+      <Button href="https://github.com/aech12/" openInNewTab={true} type="light-outline" classStyle="">See More</Button>
     </div>
   </div>
 </Container>

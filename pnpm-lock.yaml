@@ -13,6 +13,9 @@ dependencies:
   '@splinetool/runtime':
     specifier: ^0.9.282
     version: 0.9.282
+  astro-emoji:
+    specifier: ^1.2.0
+    version: 1.2.0
   flowbite:
     specifier: ^1.6.4
     version: 1.6.4
@@ -1289,6 +1292,10 @@ packages:
       svgo: 3.0.2
       terser: 5.16.1
     dev: true
+
+  /astro-emoji@1.2.0:
+    resolution: {integrity: sha512-VSOWEuIJEUGX34w591LlwVWupr6Y+oFa9/HG/L3t1VdQRqK8j9c1578m67auQXMgC1FMF8S5poYF61CPawlrLw==}
+    dev: false
 
   /astro-eslint-parser@0.11.0:
     resolution: {integrity: sha512-vcz8KBQ20WNOot6qK6w7DQtz2hwg+aLLqlUa6nAnitJLqbR12GxJN/+96U3O+VI4da5Up+FMWqNoL9mywSENtA==}

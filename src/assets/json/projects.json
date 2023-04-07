@@ -1,40 +1,44 @@
 {
   "items": [
       {
-          "title": "Item 1",
-          "text": "Text for item 1",
+          "title": "Musegy (TBR)",
+          "text": "Music Services | Selling services through Stripe Subscriptions",
           "img": "../img/projects/cat.jpg",
-          "alt": ""
+          "alt": "Project 1"
       },
       {
-          "title": "Item 2",
-          "text": "Text for item 2",
+          "title": "Gameplex Wallet (on beta)",
+          "text": "Crypto wallet for multiple platforms, with a beautifully designed website and blog",
           "img": "../img/projects/cat.jpg",
-          "alt": ""
+          "img2": "https://www.datocms-assets.com/70058/1660800876-gameplex1.png",
+          "alt": "Project 2"
       },
       {
-          "title": "Item 3",
-          "text": "Text for item 3",
+          "title": "AnsweringEverything",
+          "text": "Get answers for everything! | I've contributed to this website, moving it's blog system to MDX",
           "img": "../img/projects/cat.jpg",
-          "alt": ""
+          "img2": "https://www.datocms-assets.com/70058/1660800643-answer1.png",
+          "alt": "Project 3"
       },
       {
-          "title": "Item 4",
-          "text": "Text for item 4",
+          "title": "Looker Studio Backups",
+          "text": "App that saves Spotify API and MGID API data from multiple users and renders the data on Google Sheets/DataStudio",
           "img": "../img/projects/cat.jpg",
-          "alt": ""
+          "alt": "Project 4"
       },
       {
-          "title": "Item 5",
-          "text": "Text for item 5",
+          "title": "My Ecommerce Template",
+          "text": "My NextJS template ready to be deployed. Shopify, BigCommerce and many other integrations",
           "img": "../img/projects/cat.jpg",
-          "alt": ""
+          "img2": "https://www.datocms-assets.com/70058/1652295660-3orofow.png",
+          "alt": "Project 5"
       },
       {
-          "title": "Item 6",
-          "text": "Text for item 6",
+          "title": "OpenlyPrivate",
+          "text": "OpenlyPrivate is a Facebook-like website with Trello functionality (in beta testing).",
           "img": "../img/projects/cat.jpg",
-          "alt": ""
+          "img2": "https://www.datocms-assets.com/70058/1652296029-1231.png",
+          "alt": "Project 6"
       }
   ]
 }

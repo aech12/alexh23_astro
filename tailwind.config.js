@@ -12,6 +12,7 @@ module.exports = {
         'hero': '#BBDDFF',
         'header': '#11111E',
         'p1': '#E1FF80',
+        'p1-dark': '#a9d615'
       },
     },
   },
