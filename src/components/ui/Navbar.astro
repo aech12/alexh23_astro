@@ -4,21 +4,43 @@ import Button from '@components/common/Button.astro'
 ---
 
 <script>
+  /* show/hide mobile menu */
   let menuHidden = true
 
   const icon = document.getElementById('menuIcon')
-  const menu = document.getElementById('mobile-menu')
+  let menu = document.getElementById('mobile-menu')
 
-  if (icon) icon.addEventListener('click', () => {
-    menuHidden = !menuHidden
-    if (menu) menu.className = menuHidden ? "md:hidden flex flex-wrap items-center text-base justify-center space-x-2 block" : "hidden"
-  })
+  if (icon)
+    icon.addEventListener('click', () => {
+      menuHidden = !menuHidden
+      if (menu)
+        menu.className = menuHidden
+          ? 'md:hidden flex flex-wrap items-center text-base justify-center space-x-2 block'
+          : 'hidden'
+    })
+
+  /* darken navbar bg on scroll */
+  let header = document.getElementById('header')
+
+  window.addEventListener(
+    'scroll',
+    function () {
+      if (header) {
+        if (this.scrollY > 100) {
+          header.className = 'fixed text-gray-600 body-font w-full px-4 bg-header z-10 transition'
+        } else {
+          header.className = 'fixed text-gray-600 body-font bg-transparent w-full px-4 z-10 transition'
+        }
+      }
+    },
+    false
+  )
 </script>
 
-<header class="fixed text-gray-600 body-font bg-transparent w-full px-4 bg-red-400 z-10 ">
+<header id="header" class="fixed text-gray-600 body-font bg-transparent w-full px-4 z-10">
   <div class="p-5 pb-1 md:pb-5 mx-auto flex flex-wrap flex-row items-center justify-center max-w-7xl">
     <a
-      class="mr-4 md:mr-0 flex title-font font-medium items-center text-white hover:text-black transition"
+      class="mr-4 md:mr-0 flex title-font font-medium items-center text-white hover:text-p1 transition"
       href="#hero"
     >
       <span class="ml-3 text-lg font-bold font-inter">ALEXHOWEZ</span>

@@ -11,11 +11,11 @@ import HeroContent from './HeroContent.astro'
 </script>
 
 <section id="hero" class="relative bg-hero">
-  <div class="max-w-7xl mx-auto h-[527px]">
-    <div class="w-full h-full">
+  <div class="max-w-7xl mx-auto h-[450px] md:h-[577px]">
+    <div class="w-full h-full hidden md:block">
       <!-- <canvas id="canvas3d" class="w-full h-full"></canvas> -->
     </div>
-    <div class="absolute top-0 left-0 w-1/2 h-full flex items-center justify-center">
+    <div class="sm:mx-10 absolute top-0 left-50 md:w-1/2 lg:w-[500px] lg:left-80 h-full flex items-center justify-center">
       <HeroContent />
     </div>
   </div>

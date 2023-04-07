@@ -10,6 +10,7 @@ module.exports = {
       },
       colors: {
         'hero': '#BBDDFF',
+        'header': '#11111E',
         'p1': '#E1FF80',
       },
     },
