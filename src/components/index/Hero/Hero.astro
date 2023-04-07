@@ -10,11 +10,13 @@ import HeroContent from './HeroContent.astro'
   app.load('https://prod.spline.design/WH-CE8TKvoHB5Afo/scene.splinecode')
 </script>
 
-<section class="relative">
-  <div class="w-full h-96 bg-gradient-to-r from-blue-400 to-blue-300">
-    <!-- <canvas id="canvas3d" class="w-full h-full"></canvas> -->
-  </div>
-  <div class="absolute top-0 left-0 w-1/2">
-    <HeroContent />
+<section id="hero" class="relative bg-hero">
+  <div class="max-w-7xl mx-auto h-[527px]">
+    <div class="w-full h-full">
+      <!-- <canvas id="canvas3d" class="w-full h-full"></canvas> -->
+    </div>
+    <div class="absolute top-0 left-0 w-1/2 h-full flex items-center justify-center">
+      <HeroContent />
+    </div>
   </div>
 </section>

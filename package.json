@@ -33,6 +33,7 @@
   "dependencies": {
     "@astrojs/image": "^0.16.5",
     "@astrojs/ts-plugin": "^0.4.4",
+    "@fontsource/inter": "^4.5.15",
     "@splinetool/runtime": "^0.9.282",
     "flowbite": "^1.6.4",
     "three": "^0.151.3"
