@@ -10,12 +10,21 @@ export interface Props {
 const { text, icon, href, classStyle } = Astro.props as Props
 ---
 
-<style lang="css">
-  [astro-icon] {
-      fill: blue;
-  }
-</style>
-
-<a href={href} target="_blank" rel="noreferrer noopener" class={`inline text-gray-600 hover:text-gray-600 cursor-pointer ${classStyle}`}
-  ><Icon name={icon} width={20} height={20} class="inline" />{" "} {text}
-</a>
+{
+  href ? (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer noopener"
+      class={`inline text-gray-600 hover:text-p1 cursor-pointer ${classStyle}`}
+    >
+      <Icon name={icon} width={20} height={20} class="inline" /> {text}
+    </a>
+  ) : (
+    <p
+      class={`inline text-gray-600 ${classStyle}`}
+    >
+      <Icon name={icon} width={20} height={20} class="inline" /> {text}
+    </p>
+  )
+}

@@ -3,23 +3,31 @@ export interface Props {
   title: string
   classStyle?: string
   listItems?: string[]
+  btnType?: 'main' | 'secondary' | 'dark' | 'light' | 'light-outline' | 'light-darkoutline' | 'invis'
+  href?: string
+  openInNewTab?: boolean
 }
-const { title, classStyle, listItems } = Astro.props as Props
+const { title, classStyle, listItems, btnType = 'main', href = null, openInNewTab = false } = Astro.props as Props
 
-import ButtonLink from '@components/common/ButtonLink.astro'
+import Button from '@components/common/Button.astro'
 import SocialLink from '@components/common/SocialLink.astro'
 ---
 
-<article class={`p-8 text-left rounded-xl space-y-4 shadow-md ${classStyle} w-5/12`}>
+<article class={`p-8 w-full sm:w-auto h-min text-left rounded-xl space-y-4 shadow-md flex justify-center flex-col ${classStyle}`}>
   <p class="text-gray-500 font-semibold text-lg">{title}</p>
   <ul class="flex flex-col space-y-2">
     {
       listItems
         ? listItems.map((item) => (
-            <SocialLink text={item} icon="ic:baseline-check-circle" classStyle="text-gray-500 font-semibold text-lg" href="" />
+            <SocialLink
+              text={item}
+              icon="ic:baseline-check-circle"
+              classStyle="text-gray-500 font-semibold text-lg"
+              href=""
+            />
           ))
         : null
     }
   </ul>
-  <ButtonLink>Learn More</ButtonLink>
+  <Button href={href} openInNewTab={openInNewTab} type={btnType} classStyle="text-left">Learn More</Button>
 </article>

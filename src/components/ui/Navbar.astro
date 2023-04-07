@@ -1,17 +1,73 @@
 ---
-// import 'tailwindcss/tailwind.css';
-// import Button from "@components/common/Button.astro"
+import { Icon } from 'astro-icon'
+import Button from '@components/common/Button.astro'
 ---
 
-<header class="fixed text-gray-600 body-font bg-transparent w-full px-4 bg-red-400">
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-      <span class="ml-3 text-xl font-bold font-inter">alexhowez</span>
+<!-- todo:
+mainNav.classList.add('is-mobile')
+mainNav.classList.remove('is-desktop') -->
+
+
+<script>
+  /* show/hide mobile menu */
+  let menuHidden = true
+
+  const icon = document.getElementById('menuIcon')
+  let menu = document.getElementById('mobile-menu')
+
+  if (icon)
+    icon.addEventListener('click', () => {
+      menuHidden = !menuHidden
+      if (menu)
+        menu.className = menuHidden
+          ? 'md:hidden flex flex-wrap items-center text-base justify-center space-x-2 block'
+          : 'hidden'
+    })
+
+  /* darken navbar bg on scroll */
+  let header = document.getElementById('header')
+
+  window.addEventListener(
+    'scroll',
+    function () {
+      if (header) {
+        if (this.scrollY > 100) {
+          header.className = 'fixed text-gray-600 body-font w-full px-4 bg-header z-10 transition'
+        } else {
+          header.className = 'fixed text-gray-600 body-font bg-transparent w-full px-4 z-10 transition'
+        }
+      }
+    },
+    false
+  )
+</script>
+
+<header id="header" class="fixed text-gray-600 body-font bg-transparent w-full px-4 z-10">
+  <div class="p-5 pb-1 md:pb-5 mx-auto flex flex-wrap flex-row items-center justify-center max-w-7xl">
+    <a
+      class="mr-4 md:mr-0 flex title-font font-medium items-center text-white hover:text-p1 transition"
+      href="#hero"
+    >
+      <span class="ml-3 text-lg font-bold font-inter">ALEXHOWEZ</span>
     </a>
-    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-      <button class="mr-5 hover:text-gray-900">Button 1</button>
-      <button class="mr-5 hover:text-gray-900">Button 2</button>
-      <button class="mr-5 hover:text-gray-900">Button 3</button>
+
+    <Icon
+      id="menuIcon"
+      name="ic:baseline-menu"
+      width={25}
+      height={25}
+      class="md:hidden text-white cursor-pointer hover:text-black transition"
+    />
+
+    <nav class="md:ml-auto hidden md:flex flex-wrap items-center text-base justify-center space-x-2">
+      <Button href="#projects" type="invis">Projects</Button>
+      <Button href="#services" type="invis">Services</Button>
+      <Button href="#contactme" type="light">Contact</Button>
     </nav>
   </div>
+  <nav id="mobile-menu" class="hidden">
+    <Button href="#projects" type="invis">Projects</Button>
+    <Button href="#services" type="invis">Services</Button>
+    <Button href="#contactme" type="invis">Contact</Button>
+  </nav>
 </header>

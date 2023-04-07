@@ -1,21 +1,52 @@
 ---
 export interface Props {
   classStyle?: string
-  type?: 'main' | 'secondary'
+  type?: 'main' | 'secondary' | 'dark' | 'light' | 'light-outline' | 'light-darkoutline' | 'invis'
+  href?: string | null
+  openInNewTab?: boolean
 }
-const { classStyle, type = 'main' } = Astro.props as Props
+const { classStyle, type = 'main', href, openInNewTab = false } = Astro.props as Props
 let buttonStyle = ''
 
 switch (type) {
   case 'main':
-    buttonStyle = 'bg-blue-500 hover:bg-blue-700 text-white'
+    buttonStyle = 'bg-orange-400 hover:bg-orange-600 text-white'
     break
   case 'secondary':
-    buttonStyle = 'bg-gray-500 hover:bg-gray-700 text-white'
+    buttonStyle = 'bg-blue-500 hover:bg-blue-700 text-white'
+    break
+  case 'dark':
+    buttonStyle = 'bg-gray-900 hover:bg-p1 text-white hover:text-black'
+    break
+  case 'light':
+    buttonStyle = 'bg-white text-gray-900 hover:bg-p1 hover:text-gray-800'
+    break
+  case 'light-outline':
+    buttonStyle =
+      'bg-white border-solid border-2 border-orange-500 text-gray-900 hover:bg-orange-500 hover:text-gray-800'
+    break
+  case 'light-darkoutline':
+    buttonStyle =
+      'bg-white border-solid border-2 border-black text-gray-900 hover:bg-p1 hover:text-gray-800'
+    break
+  case 'invis':
+    buttonStyle = 'text-white hober:bg-gray-200 hover:text-p1'
     break
 }
 ---
 
-<button class={`${buttonStyle} font-bold py-2 px-4 rounded ${classStyle}`}>
-  <slot />
-</button>
+{
+  href ? (
+    <a
+      {...(openInNewTab && { target: '_blank', rel: 'noreferrer noopener' })}
+      href={href}
+      class={`${buttonStyle} font-semibold py-2 px-4 rounded ${classStyle}`}
+    >
+      <slot />
+    </a>
+  ) : (
+    <button class={`${buttonStyle} font-bold py-2 px-4 rounded transition-all ${classStyle}`}>
+      <slot />
+    </button>
+  )
+}

@@ -1,25 +1,38 @@
 ---
 import projects from '@assets/json/projects.json'
 import Container from '@components/common/Container.astro'
-import ButtonLink from '@components/common/ButtonLink.astro'
+import Button from '@components/common/Button.astro'
+import Title from '@components/common/Title.astro'
 import Project from './Project.astro'
-import im from '../../../assets/img/projects/cat.jpg'
+import img1 from '@assets/img/projects/musegy1.png' 
+import img2 from '@assets/img/projects/gameplex1.png' 
+import img3 from '@assets/img/projects/answer1.png' 
+import img4 from '@assets/img/projects/efiweb1.png' 
+import img5 from '@assets/img/projects/ecomtemplate1.png' 
+import img6 from '@assets/img/projects/openly1.png' 
 ---
 
-<!-- projects.items.map((item) => ()) -->
+<!-- <h2
+    class="bg-gradient-to-r from-blue-300 via-orange-500 to-red-400 bg-[length:100%_5px] bg-no-repeat bg-bottom w-min font-bold"
+  >
+    Reach Me
+  </h2> --><!-- projects.items.map((item) => ()) -->
 <Container classStyle="">
   <div class="py-10 w-full">
-    <h2 class="mb-2 text-center text-xl md:text-4xl font-bold">Projects</h2>
-    <ul class="my-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-      <Project item={projects.items[0]} img={im} />
-      <Project item={projects.items[1]} img={im} />
-      <Project item={projects.items[2]} img={im} />
-      <Project item={projects.items[3]} img={im} />
-      <Project item={projects.items[4]} img={im} />
-      <Project item={projects.items[5]} img={im} />
+    <div class="py-6 w-36 mx-auto">
+      <Title level="h2">Projects</Title>
+      <div class="h-1 w-full bg-gradient-to-r from-[#F19D1E] via-[#EB5D46] to-[#972324] bg-no-repeat"></div>
+    </div>
+    <ul class="my-8 px-5 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+      <Project item={projects.items[0]} img={img1} />
+      <Project item={projects.items[1]} img={img2} />
+      <Project item={projects.items[2]} img={img3} />
+      <Project item={projects.items[3]} img={img4} />
+      <Project item={projects.items[4]} img={img5} />
+      <Project item={projects.items[5]} img={img6} />
     </ul>
     <div class="w-full flex justify-center">
-      <ButtonLink classStyle="">See More</ButtonLink>
+      <Button href="https://github.com/aech12/" openInNewTab={true} type="light-outline" classStyle="">See More</Button>
     </div>
   </div>
 </Container>
